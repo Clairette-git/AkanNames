@@ -1,5 +1,5 @@
 body{
-    background-image: url("https://static8.depositphotos.com/1001435/1011/i/600/depositphotos_10113890-stock-photo-happy-man-outdoor.jpg");
+    background-image: url("https://thumbs.dreamstime.com/b/happy-boy-blue-shirt-jump-high-sand-beach-pulling-hand-up-near-sea-view-behind-happy-careless-boy-jump-high-160645630.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -35,7 +35,8 @@ span:hover{
     color: black;
 }
 label{
-    color: white;
+    font-family: 'Courier New', Courier, monospace; 
+    color: black; 
 }
 li{
     color: black;
@@ -47,4 +48,7 @@ li{
     width: 300px;
     height: 120px;
     bottom: 180px;
+}
+.click{
+    color: #000;
 }
