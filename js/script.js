@@ -13,51 +13,91 @@ function naming(){
     }
     var gender = document.querySelector('input[name="gender"]:checked').value;
     var  dayOfTheWeek = parseInt( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD )%7;
+
     if(gender==="male") {
         if(dayOfTheWeek===0){
-          alert("You were born on: " + day[0]);
-          alert("Your Akan name is: " + maleNames[0]);
+            alert("Your Akan name is: " + maleNames[0]);
+            alert("You were born on: " + day[0]);
         } else if(dayOfTheWeek===1){
-          alert("You were born on: " + day[1]);
-          alert("Your Akan name is: " + maleNames[1]);
+            alert("Your Akan name is: " + maleNames[1]);
+            alert("You were born on: " + day[1]);
         } else if(dayOfTheWeek===2){
-          alert("You were born on: " + day[2]);
-          alert("Your Akan name is: " + maleNames[2]);
+            alert("Your Akan name is: " + maleNames[2]);
+            alert("You were born on: " + day[2]);
         } else if(dayOfTheWeek===3){
-          alert("You were born on: " + day[3]);
-          alert("Your Akan name is: " + maleNames[3]);
+            alert("Your Akan name is: " + maleNames[3]);
+            alert("You were born on: " + day[3]);
         } else if(dayOfTheWeek===4){
-          alert("You were born on: " + day[4]);
-          alert("Your Akan name is: " + maleNames[4]);
+            alert("Your Akan name is: " + maleNames[4]);
+            alert("You were born on: " + day[4]);
         } else if(dayOfTheWeek===5){
-          alert("You were born on: " + day[5]);
-          alert("Your Akan name is: " + maleNames[5]);
+            alert("Your Akan name is: " + maleNames[5]);
+            alert("You were born on: " + day[5]);
         } else if(dayOfTheWeek===6){
-          alert("You were born on: " + day[6]);
-          alert("Your Akan name is: " + maleNames[6]);
+            alert("Your Akan name is: " + maleNames[6]);
+            alert("You were born on: " + day[6]);
         }
     } else {
         if(dayOfTheWeek===0){
-         alert("You were born on: " + day[0]);
-         alert("Your Akan name is: " + femaleNames[0]);
+            alert("Your Akan name is: " + femaleNames[0]);
+            alert("You were born on: " + day[0]);
        } else if(dayOfTheWeek===1){
-         alert("You were born on: " + day[1]);
-         alert("Your Akan name is: " + femaleNames[1]);
+           alert("Your Akan name is: " + femaleNames[1]);
+           alert("You were born on: " + day[1]);
        } else if(dayOfTheWeek===2){
-         alert("You were born on: " + day[2]);
-         alert("Your Akan name is: " + femaleNames[2]);
+           alert("Your Akan name is: " + femaleNames[2]);
+           alert("You were born on: " + day[2]);
        } else if(dayOfTheWeek===3){
-         alert("You were born on: " + day[3]);
-         alert("Your Akan name is: " + femaleNames[3]);
+           alert("Your Akan name is: " + femaleNames[3]);
+           alert("You were born on: " + day[3]);
        } else if(dayOfTheWeek===4){
-         alert("You were born on: " + day[4]);
-         alert("Your Akan name is: " + femaleNames[4]);
+           alert("Your Akan name is: " + femaleNames[4]);
+           alert("You were born on: " + day[4]);
        } else if(dayOfTheWeek===5){
-         alert("You were born on: " + day[5]);
-         alert("Your Akan name is: " + femaleNames[5]);
+           alert("Your Akan name is: " + femaleNames[5]);
+           alert("You were born on: " + day[5]);
        } else if(dayOfTheWeek===6){
-         alert("You were born on: " + day[6]);
-         alert("Your Akan name is: " + femaleNames[6]);
+           alert("Your Akan name is: " + femaleNames[6]);
+           alert("You were born on: " + day[6]);
        }
      }
+
+
+     function getGender () {
+        for (let gender of genders){
+          if (gender.checked){
+            return gender.value;
+          }
+        }
+      }
+    
+      let myGenderValue = getGender();
+      console.log(myGenderValue);
+    
+      // validation functions
+      function monthValidator () {
+        if (monthOfBirth < 1 || monthOfBirth > 12) {
+          return false;
+        } else {
+          return true;
+        }
+      }
+    
+      function dayValidator () {
+        if (monthOfBirth === 2 && Number(yearOfBirth)%4 === 0) {
+          if (dayOfBirth > 28 || dayOfBirth < 1) {
+            return false;
+          } else if (monthOfBirth === 2 && dayOfBirth > 29) {
+            return false;
+          } else if (monthOfBirth === 2 && dayOfBirth < 1) {
+            return false;
+          } else {
+            return true;
+          }
+        } else if (dayOfBirth < 1 || dayOfBirth > 31){
+          return false;
+        } else {
+          return true;
+        }
+      }
 }
