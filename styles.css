@@ -26,11 +26,14 @@ h2{
     color: coral; 
 }
 span{
-    color: coral;
+    color: rgb(250, 247, 245);
 }
 h1:hover{
     color: coral;
 }
 span:hover{
     color: black;
+}
+label{
+    color: white;
 }
