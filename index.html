@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton&display=swap">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Anton|Enriqueta&display=swap">
-        <script src="js/scripts.js"></script>
+        <script src="js/script.js"></script>
         <link rel="icon" href="https://bit.ly/2R3AnRc">
     </head>
     <body>
@@ -53,19 +53,19 @@
                         <form action="index.html">
                             <div class="form">
                                 <label for="input-century">Century</label>
-                                <input type="number" class="form" id="main" required placeholder="Century"><br>
+                                <input type="number" class="form" id="main" placeholder="NN" value="" required><br>
                             </div>
                             <div class="form">
                                 <label for="input-Day">Day</label>
-                                <input type="number" class="form" id="name" required placeholder="Day"><br>
+                                <input type="number" class="form" id="name" placeholder="DD" value="" required><br>
                             </div>
                             <div class="form">
                                 <label for="input-Month">Month</label>
-                                <input type="number" class="form" id="Form" required placeholder="Month"><br>
+                                <input type="number" class="form" id="Form" placeholder="MM" value="" required><br>
                             </div>
                             <div class="form">
                                 <label for="input-Year">Year</label>
-                                <input type="number" class="form" id="akan" required placeholder="Year"><br>
+                                <input type="number" class="form" id="akan" placeholder="YYYY" value="" required><br>
                             </div>
                             <div class="input">
                                 <br><input type="radio" name="gender" class="name" id="input" value="male" required>Male
@@ -75,6 +75,9 @@
                             </div>
                             <button type="button" name="button" class="click" onclick="naming();">Get the Akan Name</button>
                         </form>
+                        <form onsubmit="return clearInput()">
+                            <input class="clear" type="submit" value="Clear input">
+                          </form>
                     </div>
                 </div>
             </div>
