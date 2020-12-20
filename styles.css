@@ -14,3 +14,23 @@ p{
     font-family: 'Courier New', Courier, monospace; 
     color:black;
 }
+.col-md-4 p{
+    font-family: 'Enriqueta', serif;
+    
+}
+.col-md-4 li{
+    font-family: 'Courier New', Courier, monospace ;
+}
+h2{
+    font-family: 'Courier New', Courier, monospace; 
+    color: coral; 
+}
+span{
+    color: coral;
+}
+h1:hover{
+    color: coral;
+}
+span:hover{
+    color: black;
+}
